@@ -1,0 +1,40 @@
+{
+  "systems": [
+    {
+      "name": "PaymentsService",
+      "owner": "payments-team",
+      "env": "prod",
+      "controls": {
+        "tls_enabled": false,
+        "auth_required": false,
+        "encryption_at_rest": true,
+        "backups_enabled": true,
+        "logging_level": "INFO"
+      }
+    },
+    {
+      "name": "CatalogService",
+      "owner": "catalog-team",
+      "env": "staging",
+      "controls": {
+        "tls_enabled": true,
+        "auth_required": true,
+        "encryption_at_rest": true,
+        "backups_enabled": false,
+        "logging_level": "DEBUG"
+      }
+    },
+    {
+      "name": "NotificationService",
+      "owner": "growth-team",
+      "env": "prod",
+      "controls": {
+        "tls_enabled": true,
+        "auth_required": true,
+        "encryption_at_rest": false,
+        "backups_enabled": true,
+        "logging_level": "INFO"
+      }
+    }
+  ]
+}
